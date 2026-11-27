@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bebê Acrobata · Força, coordenação e confiança desde o primeiro dia</title>
+<meta name="description" content="Seu bebê vai engatinhar e andar sozinho. Todo o resto depende de uma mãe disposta a fazer mais. Só 10 minutos por dia.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bebê Acrobata: o mapa do movimento do seu bebê">
+<meta property="og:description" content="Força, coordenação e confiança desde o primeiro dia. Só 10 minutos por dia.">
+<!-- [VOCÊ PREENCHE: trocar SEU-DOMINIO pelo domínio real quando publicar] -->
+<meta property="og:image" content="https://bebeacrobata.online/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- PIXEL AQUI -->
+<style>
+:root{
+  --preto:#0A0A0A; --escuro:#171717; --card:#232323; --borda-esc:#333333;
+  --claro:#F8FAFC; --cinza:#F4F4F5; --branco:#FFFFFF;
+  --texto:#3F3F46; --suave:#71717A; --titulo:#111111; --linha:#E4E4E7;
+  --verde:#16A34A; --verde2:#22C55E; --verde-esc:#15803D;
+  --azul:#2563EB; --azul-esc:#1D4ED8;
+  --amarelo:#FACC15; --ama-claro:#FFF1A8;
+  --gar1:#0B2E1C; --gar2:#123F27;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--branco);color:var(--texto);font-family:Inter,Arial,Helvetica,sans-serif;font-size:17.5px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:Inter,Arial,Helvetica,sans-serif;color:var(--titulo);letter-spacing:-.025em;line-height:1.14;margin:0 0 .5em}
+h2{font-size:clamp(28px,6.6vw,44px);font-weight:900;text-align:center}
+h3{font-size:20px;font-weight:800}
+p{margin:0 0 1em}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.texto{max-width:680px;margin:0 auto}
+section{padding:64px 0}
+.centro{text-align:center}
+.marca{background:var(--amarelo);color:#111;padding:0 .12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.sublinha{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 14' preserveAspectRatio='none'%3E%3Cpath d='M3 9 C 60 3, 120 12, 180 6 S 270 4, 297 8' stroke='%2322C55E' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") bottom/100% 12px no-repeat;padding-bottom:8px}
+.preencher{background:var(--ama-claro);color:#5A4A00;padding:1px 6px;border-radius:5px;font-weight:700;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.nota-rodape{font-size:12.5px;color:var(--suave);margin-top:18px}
+sup{font-size:.6em;color:var(--suave)}
+
+/* ESBOÇOS: lugar das imagens (troca sozinho quando o arquivo existir em img/) */
+.esboco{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:2px dashed #A1A1AA;border-radius:14px;background:repeating-linear-gradient(135deg,#F4F4F5 0 12px,#ECECEE 12px 24px);color:#52525B;font-size:12.5px;font-weight:600;line-height:1.35;padding:10px;overflow:hidden}
+.esboco b{display:block;font-size:14px;color:#18181B;margin-bottom:2px}
+.escuro .esboco,.heroi .esboco{background:repeating-linear-gradient(135deg,#262626 0 12px,#1F1F1F 12px 24px);border-color:#52525B;color:#A1A1AA}
+.escuro .esboco b,.heroi .esboco b{color:#FAFAFA}
+img.foto{display:block;width:100%;height:100%;object-fit:cover}
+
+/* botões */
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:440px;margin:22px auto 0;background:var(--verde);color:#fff;text-decoration:none;font-weight:800;font-size:18px;border:0;border-radius:999px;padding:18px 22px;cursor:pointer;box-shadow:0 10px 24px rgba(22,163,74,.28);transition:background .2s}
+.btn:hover{background:var(--verde-esc)}
+.btn .seta{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.22);font-size:18px}
+.btn.azul{background:var(--azul);box-shadow:0 10px 24px rgba(37,99,235,.25)}
+.btn.azul:hover{background:var(--azul-esc)}
+.btn.preto{background:#262626;box-shadow:none}
+.btn.contorno{background:#fff;color:var(--azul);border:2px solid var(--azul);box-shadow:none}
+.btn.contorno:hover{background:#EFF6FF}
+.btn.quadrado{border-radius:12px}
+.btn:focus-visible{outline:3px solid var(--amarelo);outline-offset:4px}
+
+/* barra de urgência (real: preço de fundadora) */
+.urgencia{background:linear-gradient(90deg,#1E3A8A,#2563EB);color:#fff;text-align:center;font-weight:800;font-size:13.5px;letter-spacing:.03em;text-transform:uppercase;padding:10px 14px;line-height:1.4}
+.urgencia .tempo{display:inline-block;background:rgba(255,255,255,.16);border-radius:6px;padding:1px 7px;margin-left:4px;font-variant-numeric:tabular-nums}
+/* prova no topo (só com número real) */
+.prova-topo{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 10px;margin:14px auto 0;font-size:14.5px;color:#E4E4E7}
+.prova-topo .estrelas{color:#FACC15;font-size:16px;letter-spacing:1px}
+.prova-topo b{color:#fff}
+
+/* 1. HERÓI (sem botão: valor antes) */
+.heroi{background:var(--preto);color:#fff;text-align:center;padding:0 0 44px}
+.heroi .foto-heroi{height:300px;border-radius:0;border-left:0;border-right:0;border-top:0}
+@media (min-width:900px){
+  .heroi .foto-heroi.foto-heroi{height:720px;width:100%;object-fit:contain;object-position:50% 50%;background:#0a0a0a;border-radius:0;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 24%,#000 76%,transparent 100%),linear-gradient(to bottom,#000 72%,transparent 100%);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to right,transparent 0,#000 24%,#000 76%,transparent 100%),linear-gradient(to bottom,#000 72%,transparent 100%);
+    mask-composite:intersect}
+}
+.pilula{display:inline-flex;align-items:center;gap:10px;background:#E5E5E5;color:#171717;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:10px 18px;margin:26px auto 0}
+.pilula i{width:9px;height:9px;border-radius:50%;background:var(--verde2);display:inline-block}
+.heroi h1{color:#fff;font-size:clamp(30px,7.6vw,56px);font-weight:900;margin:22px auto 14px;max-width:860px}
+.heroi h1 .verde{color:var(--verde2)}
+.heroi .sub{font-size:18px;color:#F4F4F5;max-width:620px;margin:0 auto}
+.heroi .seg{font-size:13px;font-style:italic;color:#A1A1AA;max-width:560px;margin:22px auto 0;line-height:1.55}
+.telas{margin-top:22px;font-size:12.5px;letter-spacing:.12em;color:#D4D4D8;text-transform:uppercase}
+.telas div{display:flex;gap:18px;justify-content:center;margin-top:8px;letter-spacing:0;text-transform:none;font-size:14px;color:#E4E4E7}
+.rolar{margin-top:30px;font-size:15px;color:#A1A1AA}
+.rolar b{display:block;font-size:24px;color:#fff;animation:desce 1.8s ease-in-out infinite}
+@keyframes desce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* 2. CARTA (a copy da VSL, em texto) */
+.carta h2,.gemeos h2{text-align:left;font-size:clamp(28px,6.4vw,42px)}
+.carta p,.gemeos p{font-size:18px}
+.lead-carta{font-size:18px;font-weight:700;color:var(--titulo);margin:4px 0 16px}
+.pontos{display:grid;gap:12px}
+.ponto{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;background:var(--cinza);border-radius:16px;padding:16px}
+.ponto .n{width:40px;height:40px;border-radius:50%;background:var(--amarelo);color:#111;font-weight:900;font-size:19px;display:flex;align-items:center;justify-content:center}
+.ponto h3{font-size:18.5px;margin:2px 0 4px}
+.ponto p{font-size:16.5px;margin:0}
+.forte{font-weight:800;color:var(--titulo)}
+.caixa-verde{background:#F0FDF4;border-left:5px solid var(--verde2);border-radius:12px;padding:16px 18px;font-weight:700;color:#14532D;margin:22px 0}
+.lista-dor{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:8px}
+.lista-dor li{padding-left:26px;position:relative}
+.lista-dor li::before{content:"—";position:absolute;left:0;color:var(--suave)}
+
+/* 3. GÊMEOS */
+.gemeos .virada{font-size:22px;font-weight:900;color:var(--titulo);margin:26px 0 10px}
+
+/* 4. CTA 1 */
+.cta1{padding:10px 0 60px;text-align:center}
+.cta1 h2{font-size:clamp(24px,6vw,34px);text-transform:uppercase}
+.cta1 .acesso{color:var(--suave);font-size:14px;margin-top:-6px}
+.seguro{font-size:13px;color:var(--suave);margin-top:14px}
+.presente-link{display:inline-block;margin-top:12px;font-size:15px;color:var(--texto)}
+
+/* 5. ESPECIALISTAS (escuro) */
+.escuro{background:var(--escuro);color:#D4D4D8}
+.escuro h2,.escuro h3{color:#fff}
+.escuro .lead{font-size:17.5px;text-align:center;max-width:640px;margin:0 auto 26px;color:#E4E4E7}
+.experts{display:grid;gap:18px;max-width:760px;margin:0 auto}
+.expert{background:var(--card);border:1px solid var(--borda-esc);border-radius:18px;padding:22px}
+.expert .topo{display:flex;gap:16px;align-items:center;margin-bottom:14px}
+.expert .avatar{width:80px;height:80px;flex:0 0 80px;border-radius:50%;font-size:9.5px;padding:6px}
+.expert .avatar b{font-size:11px}
+.expert h3{font-size:18px;margin:0 0 2px}
+.expert .cargo{font-size:14px;color:#A1A1AA}
+.expert .area{font-size:12.5px;color:var(--verde2);margin-top:2px}
+.expert p{font-size:16px;color:#E4E4E7}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:12px;color:var(--verde2);background:rgba(34,197,94,.12);border-radius:999px;padding:5px 11px}
+.checks{list-style:none;padding:0;margin:26px auto 0;display:grid;gap:10px;justify-content:center;font-size:15px;color:#D4D4D8}
+.checks li::before{content:"✓";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--verde2);color:#0A0A0A;font-weight:900;font-size:12px;margin-right:10px}
+.link-verde{display:block;text-align:center;color:var(--verde2);font-weight:700;margin-top:26px;text-decoration:none}
+
+/* 6. SEGURANÇA (copy da VSL) */
+.seguranca h2{font-size:clamp(26px,6vw,38px)}
+.seguranca ul{padding-left:20px}
+.seguranca li{margin-bottom:10px}
+
+/* 7. DEPOIMENTOS (só reais) */
+.depos-sec{background:var(--cinza)}
+.aviso{font-size:13px;color:var(--suave);text-align:center;max-width:520px;margin:-6px auto 26px}
+.depos{display:grid;gap:16px;max-width:760px;margin:0 auto}
+.depo{background:#fff;border-radius:18px;padding:22px;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+.estrelas{color:#F59E0B;letter-spacing:2px;font-size:14px}
+.depo .quem{border-top:1px solid var(--linha);margin-top:14px;padding-top:12px;font-size:15px;color:var(--titulo)}
+.depo .quem small{display:block;color:var(--suave)}
+.prints{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 16px;margin:0 -20px;padding-left:20px;-webkit-overflow-scrolling:touch}
+.prints img{flex:0 0 76%;max-width:300px;height:auto;align-self:flex-start;scroll-snap-align:center;border-radius:16px;border:1px solid var(--linha);box-shadow:0 6px 20px rgba(0,0,0,.08);background:#fff}
+.arraste{text-align:center;font-size:13px;color:var(--suave);margin:2px 0 6px}
+@media(min-width:900px){.prints{display:grid;grid-template-columns:repeat(5,1fr);overflow:visible;margin:0;padding:6px 0 10px;align-items:start}.prints img{max-width:none;width:100%}.arraste{display:none}}
+
+/* 8. PRÉVIA DA ROTINA */
+.previa{background:linear-gradient(135deg,#FDF2F4,#FFFFFF 50%,#FFF7ED)}
+.app{max-width:440px;margin:0 auto;background:#fff;border-radius:22px;box-shadow:0 18px 50px rgba(0,0,0,.10);padding:18px}
+.abas{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.abas button{font:inherit;font-size:14px;font-weight:700;border:0;background:transparent;color:var(--suave);border-radius:10px;padding:8px 12px;cursor:pointer}
+.abas button[aria-selected="true"]{background:#FCE7EB;color:#BE123C}
+.abas.sub{margin-top:8px}
+.app h3{text-align:center;margin:16px 0 10px;font-size:19px}
+.numeros{display:flex;gap:10px;justify-content:center;margin-bottom:14px}
+.numeros div{background:#FFF1F2;border-radius:12px;padding:8px 14px;text-align:center;color:#E11D48;font-weight:900;font-size:20px;line-height:1.1}
+.numeros small{display:block;font-size:10px;letter-spacing:.08em;font-weight:700}
+.itens{display:grid;gap:8px;border-top:1px solid var(--linha);padding-top:14px}
+.item{border:1.5px solid var(--linha);border-radius:14px;overflow:hidden}
+.item button{width:100%;display:flex;align-items:center;gap:8px;font:inherit;font-size:15px;font-weight:600;color:var(--titulo);background:#fff;border:0;padding:12px;cursor:pointer;text-align:left}
+.item .ponto{width:9px;height:9px;border-radius:50%;flex:0 0 9px}
+.item .nome{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chip{font-size:11.5px;font-weight:700;border-radius:999px;padding:3px 8px}
+.dur{font-size:12.5px;color:var(--suave)}
+.item .corpo{display:none;padding:0 12px 12px}
+.item.aberto{border-color:#BFDBFE;box-shadow:0 0 0 2px #DBEAFE}
+.item.aberto .corpo{display:block}
+.item .corpo .esboco{height:170px;margin-bottom:10px}.item .corpo p{font-size:14.5px;color:var(--suave);margin:0}
+.item.trava{position:relative}
+.item.trava button{filter:blur(3px);pointer-events:none}
+.item.trava::after{content:"🔒 Desbloqueie no Método Bebê Acrobata";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:var(--suave);background:rgba(255,255,255,.55)}
+.explica{max-width:440px;margin:30px auto 0}
+.explica h2{text-align:left;font-size:30px}
+.explica .callout{background:#fff;border:1.5px solid var(--linha);border-radius:14px;padding:14px 16px;font-size:16px}
+
+/* 9. BIBLIOTECA (mosaico) */
+.biblio{background:var(--claro)}
+.mosaico{position:relative;height:560px;max-width:520px;margin:0 auto;overflow:hidden}
+.colunas{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;filter:blur(2px);opacity:.55}
+.col{display:flex;flex-direction:column;gap:10px;animation:sobe 30s linear infinite}
+.col:nth-child(2){animation-duration:38s;animation-direction:reverse}
+.col:nth-child(3){animation-duration:34s}
+@keyframes sobe{to{transform:translateY(calc(-50% - 5px))}}
+.col .esboco{height:180px;flex:0 0 180px;font-size:11px;border-radius:12px}
+.col img.foto{height:180px;flex:0 0 180px;border-radius:12px}
+.mosaico h2{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;margin:0;padding:0 24px;font-size:clamp(28px,7vw,40px);line-height:1.25}
+.mosaico::before,.mosaico::after{content:"";position:absolute;left:0;right:0;height:80px;z-index:1}
+.mosaico::before{top:0;background:linear-gradient(var(--claro),transparent)}
+.mosaico::after{bottom:0;background:linear-gradient(transparent,var(--claro))}
+.mosaico h2{z-index:2}
+.fase{display:flex;align-items:center;gap:10px;margin:28px 0 6px}
+.fase .num{width:34px;height:34px;border:2.5px solid var(--verde2);border-radius:50% 45% 50% 40%;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--verde)}
+.fase h3{margin:0}
+.fase span{font-size:13px;border:1px solid var(--linha);border-radius:999px;padding:3px 10px;color:var(--suave);background:#fff}
+
+/* 10. PLANOS */
+.colchetes{display:inline-block;padding:0 14px;border-left:4px solid var(--verde2);border-right:4px solid var(--verde2);border-radius:4px}
+.planos{display:grid;gap:22px;max-width:980px;margin:26px auto 0;align-items:start}
+.plano{background:#fff;border:2px solid #93C5FD;border-radius:20px;padding:26px 22px;text-align:center;position:relative}
+.plano.metodo{border-color:var(--verde2);box-shadow:0 14px 40px rgba(22,163,74,.12)}
+.selo-fund{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--verde2);color:#fff;font-size:11.5px;font-weight:900;letter-spacing:.08em;border-radius:999px;padding:6px 14px;white-space:nowrap}
+.plano h3{font-size:22px;margin-bottom:2px}
+.plano .para{font-size:14px;color:var(--suave)}
+.plano .preco{font-size:48px;font-weight:900;color:var(--azul);line-height:1;margin-top:14px}
+.plano.metodo .preco{color:var(--verde)}
+.plano .preco s{font-size:18px;color:#A1A1AA;font-weight:700;margin-left:6px}
+.plano .tipo{font-size:13px;color:var(--azul);margin-top:6px}
+.plano.metodo .tipo{color:var(--verde)}
+.plano .titulo-lista{display:block;font-weight:800;color:var(--azul);text-decoration:underline;margin:22px 0 12px}
+.plano.metodo .titulo-lista{color:var(--verde)}
+.plano ul{list-style:none;padding:0;margin:0;text-align:left;display:grid;gap:10px}
+.plano li{padding-left:28px;position:relative;font-size:16px;line-height:1.45}
+.plano li::before{content:"✓";position:absolute;left:4px;top:0;color:var(--azul);font-weight:900}
+.plano.metodo li::before{color:var(--verde)}
+.plano li.nao{color:#A1A1AA}
+.plano li.nao::before{content:"✕";color:#D4D4D8}
+.plano .perfeito{font-size:14px;font-style:italic;color:var(--suave);margin:18px 0 0}
+.fraldas{font-size:13px;color:var(--suave);margin-top:6px}
+.so-mais{display:inline-block;margin-top:10px;background:#FEF9C3;color:#713F12;font-size:13.5px;border-radius:999px;padding:5px 12px}
+.so-mais b{color:#713F12}
+.gar-ambas{text-align:center;font-size:15px;margin-top:26px}
+.gar-ambas small{display:block;color:var(--suave);font-size:13px}
+.mapa-metodo{text-align:center;font-weight:800;font-size:20px;color:var(--titulo);margin-top:30px;line-height:1.35}
+.mapa-metodo span{color:var(--verde)}
+
+/* 11. TUDO NO MÉTODO (ancoragem) */
+.tudo{background:var(--claro)}
+.lista-tudo{max-width:680px;margin:0 auto;background:#fff;border-radius:20px;box-shadow:0 10px 34px rgba(0,0,0,.06);padding:10px 18px}
+.linha-tudo{display:grid;grid-template-columns:48px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid #DCFCE7}
+.linha-tudo:last-child{border-bottom:0}
+.linha-tudo .ico{width:48px;height:48px;border-radius:12px;background:#DCFCE7;display:flex;align-items:center;justify-content:center;font-size:22px}
+.linha-tudo h3{font-size:17px;margin:0 0 4px}
+.linha-tudo p{font-size:15px;color:var(--suave);margin:0 0 6px}
+.avulso{display:inline-block;font-size:12.5px;font-weight:700;color:#B91C1C;background:#FEF2F2;border-radius:999px;padding:3px 10px}
+.avulso s{color:#B91C1C}
+.soma{max-width:680px;margin:18px auto 0;text-align:center;font-size:16px}
+.soma b{font-size:22px;color:#B91C1C;text-decoration:line-through}
+.compara{display:flex;align-items:center;justify-content:center;gap:16px;margin:26px auto 0;flex-wrap:wrap}
+.compara .cheio{text-align:center;color:#A1A1AA;font-size:12px;letter-spacing:.08em;font-weight:700}
+.compara .cheio b{display:block;font-size:30px;text-decoration:line-through;letter-spacing:0}
+.compara .seta{font-size:30px;color:var(--verde2)}
+.circulo{position:relative;text-align:center;padding:22px 30px;color:var(--verde);font-weight:800;font-size:12px;letter-spacing:.08em}
+.circulo b{display:block;font-size:42px;letter-spacing:0;line-height:1.1}
+.circulo svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.porque{max-width:640px;margin:26px auto 0;text-align:center}
+.porque h3{color:var(--verde);font-size:24px}
+.construindo{max-width:520px;margin:20px auto 0;background:#fff;border:1.5px dashed #86EFAC;border-radius:16px;padding:16px 20px}
+.construindo h3{font-size:17px;margin-bottom:8px}
+.construindo ul{list-style:none;padding:0;margin:0;display:grid;gap:6px;font-size:15.5px}
+
+/* 12. POR QUE EU CRIEI (escuro) */
+.criei{display:grid;gap:24px;max-width:860px;margin:0 auto;align-items:center}
+.criei .esboco{height:400px;max-width:320px;width:100%;margin:0 auto}
+.criei img.foto{height:400px;max-width:320px;margin:0 auto;border-radius:16px}
+.criei p{font-size:16.5px;text-align:center}
+
+/* 13. GARANTIA (verde escuro) */
+.garantia{background:linear-gradient(180deg,var(--gar1),var(--gar2));color:#DCFCE7}
+.gar-card{max-width:560px;margin:0 auto;border:1px solid rgba(255,255,255,.14);border-radius:22px;background:rgba(255,255,255,.04);padding:28px 22px;text-align:center}
+.gar-card .ico{width:64px;height:64px;border-radius:16px;background:var(--verde2);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:30px}
+.gar-card h2{color:#fff;font-size:26px}
+.gar-card p{margin:0 0 14px;font-size:17px}
+.gar-card .forte{color:#fff}
+.gar-card .box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:16px;font-weight:800;color:#fff;margin:6px 0 16px}
+
+/* 14. ESCADA, ESCOLHAS, PRONTO */
+.escada h3{font-size:24px;text-align:center}
+.escada p{max-width:680px;margin:0 auto 16px;font-size:17px}
+.escada p b{color:var(--titulo)}
+.escolhas{display:grid;gap:16px;max-width:760px;margin:26px auto 0}
+.escolha{border-radius:18px;padding:20px}
+.escolha.um{background:var(--cinza)}
+.escolha.dois{background:#F0FDF4;border:2px solid var(--verde2)}
+.escolha h3{font-size:19px}
+.escolha p{font-size:16.5px;margin:0}
+.futuro{max-width:680px;margin:26px auto 0;font-size:18px}
+.futuro .final{font-weight:900;color:var(--titulo);font-size:21px}
+.pronto{text-align:center}
+.pronto .botoes{max-width:440px;margin:0 auto}
+.pronto .gar{font-size:14px;color:var(--suave);margin-top:14px}
+
+/* 15. FAQ */
+.faq{max-width:760px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--linha)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 34px 18px 0;font-weight:600;font-size:16.5px;color:var(--titulo);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:14px;font-size:22px;color:var(--suave)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{font-size:16px;margin:0 0 18px}
+
+footer{background:var(--preto);color:#A1A1AA;font-size:13.5px;padding:44px 0 36px}
+.rodape-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:0 auto 26px}
+.rodape-col h4{color:#fff;font-size:12.5px;letter-spacing:.1em;margin:0 0 8px}
+.rodape-col a{display:block;color:#A1A1AA;text-decoration:none;margin-bottom:6px}
+.legal{max-width:760px;margin:0 auto;border-top:1px solid #262626;padding-top:18px;line-height:1.6}
+.legal p{margin:0 0 10px}
+
+/* MODAL: plano mais barato (ancoragem "pague só a diferença") */
+.overlay{position:fixed;inset:0;background:rgba(10,10,10,.65);display:none;align-items:center;justify-content:center;padding:18px;z-index:50}
+.overlay.ativo{display:flex}
+.modal{background:#fff;border-radius:22px;max-width:430px;width:100%;padding:26px 20px 20px;text-align:center;position:relative;max-height:92vh;overflow:auto;border:3px solid #F59E0B}
+.modal .fechar{position:absolute;right:12px;top:10px;border:0;background:none;font-size:24px;color:var(--suave);cursor:pointer;padding:6px}
+.modal h3{font-size:26px;color:#B45309;margin:6px 0}
+.modal p{font-size:15.5px}
+.modal .cx{border:2px dashed var(--verde2);border-radius:16px;padding:14px;margin:12px 0;text-align:left}
+.modal .cx b{color:var(--verde-esc)}
+.modal ul{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:6px;font-size:15px}
+.modal li::before{content:"✓ ";color:var(--verde);font-weight:900}
+.modal .dif{text-align:center;margin-top:10px;font-size:13.5px;color:var(--suave)}
+.modal .por{text-align:center;font-weight:900;font-size:44px;color:var(--verde);line-height:1}
+.modal .por small{font-size:20px;color:#B45309}
+.modal .continuar{display:inline-block;margin-top:14px;font-size:14.5px;color:var(--suave)}
+
+@media (min-width:760px){
+  section{padding:84px 0}
+  .heroi .foto-heroi{height:420px}
+  .experts{grid-template-columns:1fr 1fr;max-width:980px}
+  .depos{grid-template-columns:repeat(3,1fr);max-width:1040px}
+  .planos{grid-template-columns:1fr 1fr}
+  .criei{grid-template-columns:320px 1fr}
+  .criei p{text-align:left}
+  .escolhas{grid-template-columns:1fr 1fr}
+  .mosaico{height:620px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .col,.rolar b{animation:none}
+}
+
+/* ===== MOTION MINIMALISTA ===== */
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+.btn{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(22,163,74,.28)}
+.btn:active{transform:scale(.98)}
+.btn .seta{display:inline-block;transition:transform .25s ease}
+.btn:hover .seta{transform:translateX(3px)}
+.botao-cta{animation:respira 3.6s ease-in-out infinite}
+@keyframes respira{0%,100%{box-shadow:0 0 0 0 rgba(22,163,74,.35)}60%{box-shadow:0 0 0 9px rgba(22,163,74,0)}}
+.barra-fixa{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(10,10,10,.94);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transform:translateY(110%);transition:transform .4s ease}
+.barra-fixa.on{transform:none}
+.barra-fixa .btn{margin:0 auto;max-width:340px;width:auto;min-width:250px;padding:14px 26px;font-size:16px;animation:none;box-shadow:0 10px 28px rgba(0,0,0,.35);pointer-events:auto}
+@media (max-width:899px){
+  .barra-fixa{display:block;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;pointer-events:none;padding:0 0 calc(14px + env(safe-area-inset-bottom,0px));text-align:center}
+  .barra-fixa.on{transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .botao-cta{animation:none}
+  .btn,.btn .seta,.barra-fixa{transition:none}
+  .btn:hover{transform:none}
+}
+
+/* título dos gêmeos */
+.gemeos{padding-top:clamp(56px,8vw,96px)}
+.gemeos h2{font-size:clamp(30px,5vw,44px);line-height:1.12;letter-spacing:-.025em;font-weight:900;color:var(--titulo);margin:0 0 22px}
+
+/* marca-texto do título dos gêmeos: pinta da esquerda para a direita ao aparecer */
+.js .gemeos h2 .marca{background:linear-gradient(var(--amarelo),var(--amarelo)) no-repeat 0 0/0% 100%;transition:background-size 1.2s cubic-bezier(.65,0,.35,1) .25s}
+.js .gemeos.in h2 .marca{background-size:100% 100%}
+@media (prefers-reduced-motion:reduce){.js .gemeos h2 .marca{background-size:100% 100%;transition:none}}
+
+/* destaques da história: frase forte com sublinhado à mão e palavra circulada */
+.gemeos .destaque-escuro{font-size:20px;font-weight:800;color:var(--titulo);line-height:1.5;margin:26px 0 14px}
+.gemeos .destaque-verde{font-size:22px;font-weight:900;color:var(--verde-esc);line-height:1.45;margin:26px 0 16px}
+.gemeos .risco{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 14' preserveAspectRatio='none'%3E%3Cpath d='M3 9 C 60 3, 120 12, 180 6 S 270 4, 297 8' stroke='%23111111' stroke-width='3.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat 0 100%/100% 10px;padding-bottom:6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.gemeos .circula{position:relative;display:inline-block;padding:0 .12em}
+.gemeos .circula svg{position:absolute;left:-14%;top:-30%;width:128%;height:160%;overflow:visible;pointer-events:none}
+.gemeos .circula path{fill:none;stroke:var(--verde);stroke-width:3;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.js .gemeos .risco{background-size:0% 10px;transition:background-size .9s cubic-bezier(.65,0,.35,1) .3s}
+.js .gemeos.in .risco{background-size:100% 10px}
+.js .gemeos .circula path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1s ease .5s}
+.js .gemeos.in .circula path{stroke-dashoffset:0}
+@media (prefers-reduced-motion:reduce){.js .gemeos .risco{background-size:100% 10px;transition:none}.js .gemeos .circula path{stroke-dashoffset:0;transition:none}}
+
+.gemeos .nw{white-space:nowrap}
+
+/* mosaico: fundo mais presente e marca-texto linha por linha (igual ao original) */
+.mosaico .colunas{opacity:.92;filter:blur(1.6px) saturate(.95)}
+.mosaico h2{font-size:clamp(34px,9vw,48px);line-height:1.3;font-weight:900;letter-spacing:-.01em}
+.mosaico h2 .linhas{display:block;max-width:340px;margin:0 auto;text-align:center}
+.mosaico h2 .marca{padding:.02em .2em}
+@media (min-width:760px){.mosaico h2 .linhas{max-width:480px}}
+
+/* fonte de destaque do mosaico */
+.mosaico h2{font-family:"Covered By Your Grace",cursive;font-weight:400;letter-spacing:0;line-height:1.3;font-size:clamp(38px,10vw,56px)}
+
+/* marca-texto em pincel no título do mosaico */
+.mosaico h2 .marca{background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20300%2040%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20fill%3D%27%23FACC15%27%20d%3D%27M4%209%20C%2030%204%2C%2070%207%2C%20110%205%20S%20190%203%2C%20230%206%20S%20285%204%2C%20297%208%20C%20299%2014%2C%20296%2020%2C%20298%2026%20C%20299%2031%2C%20294%2035%2C%20286%2034%20C%20250%2036%2C%20210%2033%2C%20170%2035%20S%2090%2033%2C%2050%2035%20S%2012%2034%2C%205%2031%20C%201%2025%2C%203%2019%2C%202%2014%20Z%27/%3E%3Cpath%20fill%3D%27%23FDE047%27%20opacity%3D%27.55%27%20d%3D%27M12%2012%20C%2060%2010%2C%20120%2013%2C%20180%2011%20S%20260%2012%2C%20288%2013%20L%20288%2016%20C%20230%2017%2C%20160%2015%2C%20100%2017%20S%2040%2016%2C%2012%2016%20Z%27/%3E%3Cpath%20fill%3D%27%23EAB308%27%20opacity%3D%27.35%27%20d%3D%27M10%2027%20C%2070%2029%2C%20140%2026%2C%20200%2028%20S%20270%2027%2C%20290%2028%20L%20290%2030%20C%20230%2031%2C%20160%2029%2C%20100%2031%20S%2040%2030%2C%2010%2030%20Z%27/%3E%3C/svg%3E") no-repeat center/100% 100%;padding:.08em .32em .12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+/* prova do topo: estrelas + nota na mesma linha, frase embaixo */
+.prova-topo{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+.prova-topo .nota-linha{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-size:16px}
+.prova-topo .nota-linha b{font-size:17px}
+.prova-topo .prova-txt{max-width:340px;line-height:1.45}
+@media (min-width:760px){.prova-topo .prova-txt{max-width:none}}
+</style>
+</head>
+<body>
+
+<!-- URGÊNCIA (real): preço de fundadora. Com CONFIG.urgencia.ate preenchido, mostra a data e o contador até ela -->
+<div class="urgencia" id="urgencia">⚠️ Oferta válida somente hoje</div>
+
+<!-- 1. HERÓI · sem botão na primeira dobra: primeiro cria valor -->
+<header class="heroi">
+  <div class="esboco foto-heroi" data-src="img/img-01" data-cls="foto foto-heroi" data-alt="Dr. Rodrigo Vinicius com um bebê"><b>IMG-01 · Herói</b>Expert com o bebê no tapete (aviãozinho), fundo escuro · 16:9</div>
+  <div class="wrap">
+    <h1 style="margin-top:30px">Seu Mapa para Construir a Força, a Coordenação e a Confiança do Seu Bebê <span class="verde sublinha">Desde o Primeiro Dia.</span></h1>
+    <p class="sub">Seu bebê vai engatinhar e andar sozinho. Todo o resto depende de uma mãe disposta a fazer mais. Só 10 minutos por dia.</p>
+    <div class="telas">Funciona em qualquer tela<div><span>📱 Celular</span><span>💻 Computador</span><span>🖨️ Para imprimir</span></div></div>
+    <div class="prova-topo" id="prova-topo" style="margin-top:18px"><span class="nota-linha"><span class="estrelas">★★★★★</span><b id="prova-nota"></b></span><span class="prova-txt">Mais de <b id="prova-pais"></b> famílias já confiam na nossa especialista</span></div>
+    <p class="rolar">Role para entender por que isso importa tanto agora<b>↓</b></p>
+  </div>
+</header>
+
+<!-- 3. GÊMEOS -->
+<section class="gemeos">
+  <div class="wrap texto">
+    <h2><span class="marca">O que aconteceu quando um gêmeo recebeu todas as oportunidades de movimento, e o outro nenhuma</span></h2>
+    <p>Nos anos 1930, a pesquisadora Myrtle McGraw acompanhou dois gêmeos desde o nascimento: Johnny e Jimmy.<sup>1</sup></p>
+    <p>Johnny recebeu treino de movimento desde os primeiros meses. Nadar, escalar, até patinar. Praticamente toda oportunidade de movimento que McGraw conseguiu criar para ele.</p>
+    <p>Jimmy não recebeu nada disso. Só o cuidado normal, sem nenhum treino a mais.</p>
+    <p class="destaque-escuro">No fim do experimento, os dois engatinharam e andaram <span class="risco">praticamente na mesma época.</span></p>
+    <p>Johnny atingiu os marcos no mesmo ritmo que Jimmy.</p>
+    <p class="destaque-verde">Mas Johnny era muito mais <span class="nw"><span class="circula">capaz<svg viewBox="0 0 120 50" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M10 27 C9 11 40 4 63 4 C93 4 114 13 113 27 C112 42 83 47 58 46 C31 45 6 40 7 25 C8 15 22 9 36 7"/></svg></span>.</span></p>
+    <p>Ainda bem pequeno, ele patinava, nadava sozinho e escalava rampas e estruturas que desafiariam crianças bem mais velhas.</p>
+    <p>Então os pesquisadores tentaram ensinar as mesmas habilidades ao Jimmy. E ele alcançou o irmão em várias delas. Parecia que o treino de bebê quase não tinha feito diferença.</p>
+    <p>Até que, anos depois, voltaram a acompanhar os dois, e a história mudou. Johnny continuava com mais coordenação, mais controle e mais confiança no próprio corpo. Jimmy aprendeu as habilidades, uma por uma. O que ele não conseguiu recuperar foi o que deixou de viver quando era bebê.</p>
+    <p class="destaque-escuro">O movimento não fez Johnny atingir os marcos <span class="risco">mais cedo.</span></p>
+    <p>O que ele fez foi construir a base para todo o resto: a coordenação, o controle do corpo e a confiança física que nenhuma tabela de marcos consegue medir.</p>
+    <p class="virada"><span class="sublinha">A diferença não foi genética. Foi oportunidade.</span></p>
+    <p class="nota-rodape"><sup>1</sup> McGraw, M. B. (1935). <i>Growth: A Study of Johnny and Jimmy</i>. Appleton-Century-Crofts.</p>
+  </div>
+</section>
+
+<!-- 4. PRIMEIRO BOTÃO (depois do valor) -->
+<section class="cta1">
+  <div class="wrap">
+    <h2>Seu bebê é capaz de muito mais</h2>
+    <p class="acesso">Bebê Acrobata · acesso digital imediato</p>
+    <a href="#planos" class="btn botao-cta"><span class="seta">→</span>Quero ajudar meu bebê agora</a>
+    <p class="seguro">🔒 Pagamento 100% seguro</p>
+  </div>
+</section>
+
+<!-- 5. ESPECIALISTAS QUE REVISARAM (escuro) -->
+<section class="escuro">
+  <div class="wrap">
+    <h2>Desenvolvido com especialistas em pediatria. Revisado por terapeutas ocupacionais.</h2>
+    <p class="lead">O Bebê Acrobata foi desenvolvido com profissionais do desenvolvimento infantil. Depois, cada exercício foi revisado e aprovado pela Dra. Ana Helena e pelo Dr. Rodrigo Vinicius, terapeutas ocupacionais, para merecer a sua confiança.</p>
+    <div class="experts">
+      <div class="expert">
+        <div class="topo">
+          <div class="esboco avatar" data-src="img/img-02" data-cls="foto avatar" data-alt="Dra. Ana Helena"><b>IMG-02</b>foto da Dra. Ana Helena</div>
+          <div><h3>Dra. Ana Helena</h3><div class="cargo">Doutora em Terapia Ocupacional</div><div class="area">Desenvolvimento infantil</div></div>
+        </div>
+        <p>Revisou o programa inteiro: os sinais de prontidão de cada fase, os pontos de parada e as progressões adequadas para cada idade. Garantiu que você saiba exatamente quando pausar e quando avançar uma rotina.</p>
+        <div class="tags"><span>Segurança verificada</span><span>Adequado à idade</span></div>
+      </div>
+      <div class="expert">
+        <div class="topo">
+          <div class="esboco avatar" data-src="img/img-03" data-cls="foto avatar" data-alt="Dr. Rodrigo Vinicius"><b>IMG-03</b>foto do Dr. Rodrigo Vinicius</div>
+          <div><h3>Dr. Rodrigo Vinicius</h3><div class="cargo">Terapeuta Ocupacional Licenciado</div><div class="area">Marcos motores e orientação aos pais</div></div>
+        </div>
+        <p>Testou a biblioteca de exercícios do começo ao fim. Conferiu cada aviso, cada limite de idade e cada ponto de progressão de todos os movimentos do programa.</p>
+        <div class="tags"><span>Biblioteca verificada</span><span>Progressões aprovadas</span></div>
+      </div>
+    </div>
+    <ul class="checks">
+      <li>Todos os exercícios revisados</li>
+      <li>Orientações de segurança verificadas</li>
+      <li>Progressões por idade aprovadas</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7. DEPOIMENTOS (prints enviados pela Dra. Ana Helena) -->
+<section class="depos-sec">
+  <div class="wrap">
+    <h2><span class="sublinha">O que os pais estão dizendo</span></h2>
+    <div class="prints">
+      <img src="img/depo-1.webp" alt="Mensagem de Letícia para a Dra. Ana Helena">
+      <img src="img/depo-2.webp" alt="Mensagem de Rafael para a Dra. Ana Helena">
+      <img src="img/depo-3.webp" alt="Mensagem de Maicon para a Dra. Ana Helena">
+      <img src="img/depo-4.webp" alt="Mensagem de Camila para a Dra. Ana Helena">
+      <img src="img/depo-5.webp" alt="Mensagem de Bruna para a Dra. Ana Helena">
+    </div>
+    <p class="arraste">arraste para o lado →</p>
+    <p class="aviso">Mensagens reais enviadas à Dra. Ana Helena por pais que ela acompanha, reproduzidas com autorização. Cada experiência é única.</p>
+  </div>
+</section>
+
+<!-- 8. PRÉVIA DA ROTINA -->
+<section class="previa">
+  <div class="wrap">
+    <div class="app">
+      <div class="abas" role="tablist" id="abas-semana"></div>
+      <div class="abas sub" role="tablist" id="abas-tipo">
+        <button type="button" role="tab" aria-selected="true" data-tipo="semana">Rotina da semana</button>
+        <button type="button" role="tab" aria-selected="false" data-tipo="qualquer">A qualquer hora</button>
+      </div>
+      <h3 id="rotina-titulo"></h3>
+      <div class="numeros"><div><span id="n-ex">6</span><small>EXERCÍCIOS</small></div><div>~<span id="n-min">5</span><small>MINUTOS</small></div></div>
+      <div class="itens" id="itens"></div>
+    </div>
+    <div class="explica">
+      <h2>👆 É assim que 10 minutos parecem</h2>
+      <p>Chega de pesquisar "o que fazer com meu bebê hoje".</p>
+      <p>O <b>Mapa do Movimento</b> te dá a biblioteca completa de exercícios, organizada por idade e por fase. Abriu, escolheu, fez junto. Pronto.</p>
+      <p><b>Quer que a gente faça por você?</b> O <b>Método Bebê Acrobata</b> entrega a rotina pronta de cada semana do primeiro ano, já montada para a fase do seu bebê, e 5 rotinas para os momentos difíceis.</p>
+      <p>Cada rotina combina com o momento em que seu bebê está agora e prepara para o que vem depois.</p>
+      <p class="callout"><b>Você não precisa ser atlética.</b> O problema nunca foi você. É fazer tudo sem mapa: um vídeo daqui, outro dali, sem saber se serve para a fase dele.</p>
+      <a href="#planos" class="btn quadrado botao-cta">Quero ajudar meu bebê agora →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 9. A BIBLIOTECA DE MOVIMENTOS -->
+<section class="biblio">
+  <div class="wrap">
+    <div class="mosaico">
+      <div class="colunas" id="colunas" aria-hidden="true"></div>
+      <h2><span class="linhas"><span class="marca">O cérebro do seu bebê está construindo uma biblioteca de movimentos agora</span></span></h2>
+    </div>
+    <div class="texto" style="margin-top:34px">
+      <p>Nos primeiros meses, o cérebro do seu bebê está em modo coleta. Cada chute, cada tentativa de alcançar, cada tentativa de rolar vira uma nova entrada. Pesquisadores que acompanharam bebês com sensores contaram milhares de movimentos de perna por dia nos primeiros meses.<sup>2</sup> Só de perna.</p>
+      <p>Cada movimento é o cérebro catalogando o que esse corpo consegue fazer.</p>
+      <div class="fase"><div class="num">1</div><h3>A biblioteca</h3><span>Primeiros meses</span></div>
+      <p>Seu bebê tenta de tudo. Chutar, alcançar, rolar, empurrar. O cérebro cria conexões para cada movimento que experimenta. Quanto mais variado, mais rico o catálogo.</p>
+      <div class="fase"><div class="num">2</div><h3>A virada</h3><span>Do fim do 1º ano em diante</span></div>
+      <p>Aos poucos, o cérebro passa de colecionar para refinar. Em vez de tentar tudo, o bebê começa a escolher e a fortalecer os padrões que funcionam. Qual engatinhar é mais eficiente? Qual alcance pega o brinquedo? O cérebro otimiza a partir do que juntou.</p>
+      <p class="forte" style="margin-top:22px">Lembra dos gêmeos? Então: a biblioteca do Johnny, o que recebeu todas as oportunidades de movimento, estava cheia de milhares de padrões.</p>
+      <p>A do Jimmy, o irmão que só teve o cuidado normal, não estava vazia, mas era mais fina. Os dois cérebros fizeram a mesma otimização. Só tinham bibliotecas diferentes para trabalhar.</p>
+      <p class="forte">O Bebê Acrobata enche essa biblioteca enquanto o cérebro do seu bebê está mais aberto a ela. 10 minutos de movimento variado e com propósito por dia, nos meses em que a coleta está no pico.</p>
+      <p class="nota-rodape"><sup>2</sup> Adolph, K. E. e Berger, S. E. (2006). Motor development. Em <i>Handbook of Child Psychology</i>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 10. PLANOS (com a ancoragem da outra estrutura) -->
+<section id="planos">
+  <div class="wrap">
+    <h2><span class="colchetes">Escolha o seu caminho</span></h2>
+    <p class="centro" style="color:var(--suave);max-width:560px;margin:0 auto">As duas opções dão acesso para sempre. A diferença é o quanto a gente faz por você.</p>
+    <div class="planos">
+      <div class="plano">
+        <h3>Mapa do Movimento</h3>
+        <div class="para">Aprenda o sistema e monte a sua rotina</div>
+        <div class="preco">R$ 29,90</div>
+        <div class="tipo">Pagamento único</div>
+        <span class="titulo-lista">Tudo o que você precisa para começar</span>
+        <ul>
+          <li><b>Guia completo do movimento</b> (os 6 degraus, do 1º mês aos primeiros passos)</li>
+          <li><b>Biblioteca de exercícios</b> (mais de 40 essenciais, com o passo a passo de cada um)</li>
+          <li>Acesso para sempre</li>
+          <li class="nao">Rotina pronta de cada semana</li>
+          <li class="nao">5 rotinas para os momentos difíceis</li>
+          <li class="nao">Guia Definitivo do Engatinhar</li>
+          <li class="nao">Série Mãe Confiante</li>
+          <li class="nao">Videoteca com 51 vídeos</li>
+          <li class="nao">12 áudios da Dra. Ana Helena</li>
+        </ul>
+        <p class="perfeito">Para quem tem tempo de montar a própria rotina sozinha</p>
+        <button type="button" class="btn quadrado contorno" id="abrir-modal">Quero só o Mapa · R$ 29,90</button>
+      </div>
+      <div class="plano metodo">
+        <span class="selo-fund">OFERTA DE FUNDADORA</span>
+        <h3>Método Bebê Acrobata</h3>
+        <div class="para">O método feito para você</div>
+        <div class="preco">R$ 47<s>R$ 97</s></div>
+        <div class="tipo">Preço de fundadora · pagamento único</div>
+        <div class="fraldas">52 rotinas prontas, uma por semana: <b>menos de R$ 1 por semana</b></div>
+        <span class="titulo-lista">Tudo do Mapa, MAIS…</span>
+        <ul>
+          <li><b>Rotina pronta de cada semana</b> (as 52 semanas do 1º ano, pela fase do seu bebê)</li>
+          <li><b>5 rotinas para os momentos difíceis</b> (bruços sem choro, cólica, hora de dormir e mais)</li>
+          <li><b>Guia Definitivo do Engatinhar</b></li>
+          <li><b>Série Mãe Confiante</b> (do "tenho medo de machucar" ao "sei o que estou fazendo")</li>
+          <li><b>Videoteca</b> (51 vídeos de demonstração)</li>
+          <li><b>12 áudios da Dra. Ana Helena</b> (a Série Mãe Confiante e um áudio por fase)</li>
+          <li>Sinais para conversar com o pediatra</li>
+          <li>Diário das Conquistas</li>
+          <li>Acesso para sempre + tudo o que for lançado</li>
+        </ul>
+        <p class="perfeito">Para a mãe ocupada que quer saber exatamente o que fazer hoje</p>
+        <a href="#planos" class="btn quadrado botao-checkout" data-checkout="metodo">Quero o Método completo · R$ 47</a>
+      </div>
+    </div>
+    <p class="gar-ambas"><b>Garantia de 30 dias</b> nas duas opções.<small>Teste sem risco. Se não for para você, devolvemos tudo.</small></p>
+    <p class="mapa-metodo">O Mapa te dá o caminho. <span>O Método te leva pela mão.</span></p>
+  </div>
+</section>
+
+<!-- 11. TUDO NO MÉTODO (ancoragem: valor de cada item avulso) -->
+<section class="tudo">
+  <div class="wrap">
+    <h2><span class="sublinha">Tudo o que vem no Método Bebê Acrobata</span></h2>
+    <p class="centro" style="color:var(--suave);max-width:560px;margin:0 auto 26px">O método que diz exatamente o que fazer todos os dias, montado para a fase do SEU bebê.</p>
+    <div class="lista-tudo">
+      <div class="linha-tudo"><div class="ico">📚</div><div><h3>O Mapa do Movimento</h3><p>O guia que começou tudo: o sistema completo por escrito, os 6 degraus e a biblioteca com mais de 40 exercícios essenciais, com o passo a passo de cada um.</p><span class="avulso">Avulso: <s>R$ 34,90</s></span></div></div>
+      <div class="linha-tudo"><div class="ico">📋</div><div><h3>Rotina pronta de cada semana</h3><p>52 rotinas, uma por semana, do nascimento ao primeiro aniversário. Abriu, viu o que fazer, fez junto. Pronto.</p><span class="avulso">Avulso: <s>R$ 39,90</s></span></div></div>
+      <div class="linha-tudo"><div class="ico">⏰</div><div><h3>5 rotinas para os momentos difíceis</h3><p>Bruços sem choro, hora da cólica, antes de dormir, rotina do engatinhar e rotina dos primeiros passos.</p><span class="avulso">Avulso: <s>R$ 24,90</s></span></div></div>
+      <div class="linha-tudo"><div class="ico">🐾</div><div><h3>Guia Definitivo do Engatinhar</h3><p>Por que engatinhar importa tanto, as fases do engatinhar e o que fazer quando parece que ele vai "pular" essa etapa.</p><span class="avulso">Avulso: <s>R$ 19,90</s></span></div></div>
+      <div class="linha-tudo"><div class="ico">💜</div><div><h3>Série Mãe Confiante</h3><p>Cinco encontros que levam você do "tenho medo de machucar meu bebê" ao "sei exatamente o que estou fazendo". A parte do programa que, no fundo, é para você.</p><span class="avulso">Avulso: <s>R$ 29,90</s></span></div></div>
+      <div class="linha-tudo"><div class="ico">🎬</div><div><h3>Videoteca</h3><p>51 vídeos de demonstração, organizados por fase: você vê o movimento antes de fazer.</p><span class="avulso">Avulso: <s>R$ 37,90</s></span></div></div>
+      <div class="linha-tudo"><div class="ico">🎧</div><div><h3>12 áudios da Dra. Ana Helena</h3><p>A Série Mãe Confiante em áudio e um áudio para cada fase, com o que esperar e o que fazer. Para ouvir enquanto amamenta ou embala.</p><span class="avulso">Avulso: <s>R$ 19,90</s></span></div></div>
+      <div class="linha-tudo"><div class="ico">🩺</div><div><h3>Sinais para conversar com o pediatra</h3><p>Um checklist por fase, a partir dos marcos da Caderneta da Criança. Você chega na consulta sabendo o que perguntar.</p><span class="avulso">Avulso: <s>R$ 14,90</s></span></div></div>
+      <div class="linha-tudo"><div class="ico">📔</div><div><h3>Diário das Conquistas</h3><p>O primeiro rolar, o primeiro "sentou sozinho", o primeiro passo. Com data, para guardar para sempre.</p><span class="avulso">Avulso: <s>R$ 9,90</s></span></div></div>
+    </div>
+    <p class="soma">Comprando cada item separado: <b>R$ 232,10</b></p>
+    <div class="compara">
+      <div class="cheio">PREÇO CHEIO<b>R$ 97</b></div>
+      <div class="seta">→</div>
+      <div class="circulo">PREÇO DE FUNDADORA<b>R$ 47</b>
+        <svg viewBox="0 0 200 110" preserveAspectRatio="none" aria-hidden="true"><path d="M30 18 C 80 -6, 175 4, 192 46 C 205 86, 120 112, 60 102 C 8 93, -6 52, 22 26 L 34 14" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+    <div class="porque">
+      <h3>Por que preço de fundadora?</h3>
+      <p>O Bebê Acrobata ainda está crescendo. O sistema principal está pronto, e a videoteca com 51 vídeos já vem junto. Mas não vou parar: a rotina da semana direto no WhatsApp e uma comunidade de mães estão a caminho.</p>
+      <p>Quem entra agora como fundadora recebe tudo o que for lançado, para sempre, sem pagar a mais. Hoje, R$ 47. Quando o sistema estiver completo, o preço vai para R$ 97.</p>
+      <p><b>Você não paga menos porque leva menos. Paga menos porque chegou antes.</b></p>
+    </div>
+    <a href="#planos" class="btn botao-checkout" data-checkout="metodo"><span class="seta">→</span>Quero ajudar meu bebê agora</a>
+  </div>
+</section>
+
+<!-- 13. GARANTIA -->
+<section class="garantia">
+  <div class="wrap">
+    <div class="gar-card">
+      <div class="ico">🛡️</div>
+      <h2>Garantia Mãe e Bebê Confiantes</h2>
+      <p>Faça assim.</p>
+      <p>Entre no Bebê Acrobata...</p>
+      <p>Abra a sua primeira rotina hoje...</p>
+      <p>Faça os movimentos com o seu bebê por 30 dias completos...</p>
+      <p>E, se você não sentir diferença (em você e no seu bebê)...</p>
+      <p class="forte">Então eu não quero o seu dinheiro.</p>
+      <p>Mande um e-mail para <a href="mailto:suportebebeacrobata@gmail.com">suportebebeacrobata@gmail.com</a>. Uma linha basta. Reembolso total, sem formulário e sem burocracia.</p>
+      <div class="box">São 30 dias completos para testar o sistema inteiro com o seu bebê, sem risco.</div>
+      <p>Eu faço essa promessa porque confio no método. O que eu espero receber de você não é um pedido de reembolso. É o vídeo do seu bebê erguendo a cabeça pela primeira vez, atravessando a sala engatinhando, rindo no meio da rotina.</p>
+      <p class="forte">Então o único risco de verdade? Não começar.</p>
+      <a href="#planos" class="btn quadrado botao-cta">Quero ajudar meu bebê agora →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 14. PENSE ASSIM + DUAS ESCOLHAS (copy da VSL) + PRONTO -->
+<section class="escada">
+  <div class="wrap">
+    <h3>Pense assim…</h3>
+    <p>Se tudo isso só trocasse a ansiedade do <b>"será que estou fazendo certo?"</b> pela confiança de seguir um sistema com começo, meio e fim… <b>valeria R$ 47?</b></p>
+    <p>Se só trocasse as pesquisas das 2 da manhã (<b>"meu bebê está atrasado?"</b>, <b>"por que ele não aceita ficar de bruços?"</b>) por respostas de verdade… <b>valeria R$ 47?</b></p>
+    <p>Se só garantisse que você aproveitou os meses em que o cérebro do seu bebê está mais faminto por movimento, em vez de descobrir tudo isso daqui a seis meses e desejar ter começado antes… <b>valeria R$ 47?</b></p>
+    <p>Se só ajudasse o seu bebê a construir um engatinhar forte, usando os dois lados do corpo por igual… <b>valeria R$ 47?</b></p>
+    <p>Se só te desse a rotina pronta de cada semana, para você nunca mais se perguntar "o que eu faço hoje?"… <b>valeria R$ 47?</b></p>
+
+    <div class="escolhas">
+      <div class="escolha um"><h3>Escolha 1: não fazer nada</h3><p>Voltar para o bruços aleatório que faz o seu bebê gritar, continuar pegando exercício do Instagram e esperar para ver. A maioria dos bebês acaba chegando lá, e provavelmente vai ficar tudo bem. Mas você sempre vai se perguntar: e se eu tivesse dado mais? E se eu tivesse feito com mais intenção?</p></div>
+      <div class="escolha dois"><h3>Escolha 2: dar o passo</h3><p>Seguir um sistema, ganhar a clareza e a confiança que estavam faltando e devolver ao seu bebê as oportunidades de movimento que a vida moderna tirou.</p></div>
+    </div>
+    <div class="futuro">
+      <p>Em 5 minutos você abre a sua primeira rotina. Hoje à noite, faz com o seu bebê.</p>
+      <p>E daqui a 30 dias, imagine: ele no chão e, em vez de reclamar, alcançando, empurrando, rolando com vontade. Explorando, se divertindo, virando a criança curiosa e capaz que você sabe que ele pode ser.</p>
+      <p>E você? Não está mais ansiosa. Não está mais se perguntando se está certo. Está confiante, porque sabe exatamente o que está fazendo.</p>
+      <p class="final">Essa é a mãe que você está prestes a se tornar.</p>
+    </div>
+
+    <div class="pronto" style="margin-top:54px">
+      <h2>Pronto para começar?</h2>
+      <p style="max-width:560px;margin:0 auto">O cérebro do seu bebê está construindo a biblioteca de movimentos agora. Foi para isso que o Bebê Acrobata foi criado. Acesso imediato ao sistema completo 👇</p>
+      <div class="botoes">
+        <a href="#planos" class="btn quadrado botao-checkout" data-checkout="metodo">Quero o Método completo · R$ 47</a>
+        <button type="button" class="btn quadrado contorno" data-abre-modal>Quero só o Mapa · R$ 29,90</button>
+      </div>
+      <p class="gar">Com a Garantia Mãe e Bebê Confiantes. 30 dias, sem risco.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 15. FAQ -->
+<section style="padding-top:20px">
+  <div class="wrap">
+    <h2 style="font-size:26px">Perguntas frequentes</h2>
+    <div class="faq">
+      <details><summary>É seguro para o meu bebê?</summary><p>Cada exercício traz orientações de segurança, requisitos para avançar e o sinal claro de quando o seu bebê está pronto. Todos os exercícios foram revisados pelas terapeutas ocupacionais Dra. Ana Helena e Dr. Rodrigo Vinicius. Faça sempre com ele acordado e com você do lado, e pare se algo não parecer bem.</p></details>
+      <details><summary>Isso não vai fazer meu bebê andar cedo demais? Pular etapa não é ruim?</summary><p>Não é sobre velocidade. A escada segue a ordem certa: força no tronco antes de sentar, engatinhar com os dois lados antes de ficar de pé. Marco não é troféu. O objetivo não é cedo. É forte.</p></details>
+      <details><summary>Meu bebê parece bem. A gente precisa mesmo disso?</summary><p>Existe uma diferença entre o bebê que senta porque chegou a idade e o bebê que senta porque construiu força para sentar firme. O Bebê Acrobata é sobre o segundo.</p></details>
+      <details><summary>Meu bebê odeia ficar de bruços. Vai funcionar?</summary><p>Quase sempre, o bebê que odeia bruços ainda não tem força para essa posição. Por isso a gente não começa no chão: começa no seu peito, de lado e no colo. O chão vem depois, quando ele já tem força.</p></details>
+      <details><summary>O pediatra diz que está tudo bem. Ainda preciso disso?</summary><p>Não é para consertar problema. É como a alimentação: o bebê cresce com o básico, mas o que você oferece com intenção dá a ele mais material para trabalhar. O Bebê Acrobata soma com o pediatra, não substitui.</p></details>
+      <details><summary>E se o meu bebê nasceu prematuro ou tem alguma necessidade especial?</summary><p>Converse antes com o especialista que acompanha vocês e mostre o guia para ele. Em prematuros, use a idade corrigida.</p></details>
+      <details><summary>Para que idades serve?</summary><p>Do nascimento aos 18 meses, pela fase e não por uma idade fixa. A fase em que mais rende é dos 3 aos 10 meses.</p></details>
+      <details><summary>Meu bebê já tem alguns meses. É tarde para começar?</summary><p>Não. A janela vai até os 18 meses, e você começa no degrau em que ele está hoje. Começar entre os 5 e os 8 meses funciona muito bem.</p></details>
+      <details><summary>Quanto tempo isso toma?</summary><p>10 minutos por dia, dentro do tempo de chão que você já passa com ele.</p></details>
+      <details><summary>Não sou nada atlética. Eu consigo?</summary><p>Consegue. A sua forma física não importa. O que importa é ter um sistema que diga exatamente o que fazer.</p></details>
+      <details><summary>Em quanto tempo vou ver resultado?</summary><p>A primeira mudança costuma ser em você: a segurança de saber o que fazer. No bebê, cada um tem o seu ritmo, e o Diário das Conquistas ajuda você a enxergar cada avanço.</p></details>
+      <details><summary>Qual a diferença entre o Mapa e o Método?</summary><p>O Mapa é o caminho: o guia e a biblioteca completa, para você montar a sua rotina. O Método te leva pela mão: a rotina pronta de cada semana, as 5 rotinas dos momentos difíceis, o Guia do Engatinhar e a Série Mãe Confiante.</p></details>
+      <details><summary>Qual a diferença para o conteúdo grátis do Instagram e do YouTube?</summary><p>Vídeo solto não diz se o exercício é adequado para a fase do seu bebê, nem mostra os erros que você precisa evitar. Aqui tudo está na ordem certa, com o sinal de quando avançar.</p></details>
+      <details><summary>É assinatura?</summary><p>Não. Pagamento único, e o acesso é seu para sempre.</p></details>
+      <details><summary>Tem garantia?</summary><p>Tem: 30 dias. Uma linha por e-mail e devolvemos 100%.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="rodape-col">
+      <div><h4>PROGRAMA</h4><a href="#planos">Começar</a><a href="#revisao">Revisão da especialista</a></div>
+      <div><h4>SUPORTE E LEGAL</h4><a href="#contato">Contato</a><a href="#reembolso">Pedido de reembolso</a><a href="#privacidade">Privacidade e termos</a></div>
+    </div>
+    <div class="legal">
+      <p>Você, e somente você, é responsável pela segurança e pelo bem-estar do seu filho. Este guia não substitui orientação médica profissional. Se algo não parecer certo, não faça. A segurança do seu bebê vem em primeiro lugar.</p>
+      <p>Os itens do Método também são vendidos separadamente pelos valores indicados.</p>
+      <p>© 2026 Bebê Acrobata</p>
+      <p>Este site não faz parte do site do Facebook nem da Meta Platforms, Inc. e não é endossado pelo Facebook de nenhuma forma. FACEBOOK é uma marca registrada da Meta Platforms, Inc.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL: clique no Mapa (ancoragem "pague só a diferença") -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+  <div class="modal">
+    <button type="button" class="fechar" id="fechar-modal" aria-label="Fechar">✕</button>
+    <div style="font-size:38px">🧸</div>
+    <h3 id="modal-titulo">Espere! Você viu isso?</h3>
+    <p>Por R$ 10, você está prestes a deixar de fora a <b>rotina pronta de cada semana</b>, as <b>5 rotinas dos momentos difíceis</b>, o <b>Guia do Engatinhar</b> e a <b>Série Mãe Confiante</b>.</p>
+    <div class="cx">
+      <b>✅ LEVE O MÉTODO COMPLETO:</b>
+      <ul><li>Tudo do Mapa</li><li>A rotina pronta das 52 semanas</li><li>As 5 rotinas, o Guia do Engatinhar e a Série Mãe Confiante</li></ul>
+      <div class="dif">Pague só a diferença, menos que um lanche:</div>
+      <div class="por"><small>MAIS</small> R$ 10</div>
+      <div class="dif">total de R$ 39,90</div>
+    </div>
+    <a href="#planos" class="btn quadrado botao-checkout" data-checkout="modal">Sim! Quero o Método completo</a>
+    <a href="#planos" class="continuar botao-checkout" data-checkout="mapa">Continuar só com o Mapa</a>
+  </div>
+</div>
+
+<script>
+/* ================= CONFIGURAÇÃO: só mexer aqui ================= */
+const CONFIG = {
+  checkout: {
+    mapa: "",    // [VOCÊ PREENCHE] link Cakto do Mapa do Movimento (R$ 29,90)
+    metodo: "",  // [VOCÊ PREENCHE] link Cakto do Método Bebê Acrobata (R$ 47)
+    modal: ""    // [VOCÊ PREENCHE] link da oferta "pague só a diferença": Método por R$ 39,90
+  },
+  // Prova no topo: use a nota e o número de compradores REAIS (painel da Cakto). Vazio = aparece o marcador amarelo.
+  prova: { nota: "4,9", pais: "34.567" }, // clientes reais da especialista
+  // Urgência: modo "hoje" mostra "OFERTA VÁLIDA SOMENTE HOJE – [data do dia]".
+  // Modo "data" usa uma data fixa (ate: "AAAA-MM-DD") com contador e some depois dela.
+  urgencia: { modo: "hoje", ate: "" }
+};
+
+/* Prova no topo */
+(function(){
+  const p = CONFIG.prova, n = document.getElementById("prova-nota"), q = document.getElementById("prova-pais");
+  if (p.nota) n.textContent = p.nota; else n.innerHTML = '<span class="preencher">[nota real]</span>';
+  if (p.pais) q.textContent = p.pais; else q.innerHTML = '<span class="preencher">[nº real de compradores]</span>';
+})();
+
+/* Urgência com data real: contador até o fim do preço de fundadora (o mesmo para todo mundo) */
+(function(){
+  const ate = CONFIG.urgencia.ate, barra = document.getElementById("urgencia");
+  const dd = x => String(x).padStart(2, "0");
+  if (CONFIG.urgencia.modo === "hoje") {
+    const h = new Date();
+    barra.textContent = `⚠️ Oferta válida somente hoje – ${dd(h.getDate())}/${dd(h.getMonth() + 1)}/${h.getFullYear()}`;
+    return;
+  }
+  if (!ate) return;
+  const fim = new Date(ate + "T23:59:59-03:00").getTime();
+  const [a, m, d] = ate.split("-");
+  const dois = x => String(x).padStart(2, "0");
+  const tic = () => {
+    const r = fim - Date.now();
+    if (r <= 0) { barra.remove(); return; }
+    const dias = Math.floor(r / 864e5), h = Math.floor(r % 864e5 / 36e5), mi = Math.floor(r % 36e5 / 6e4), s = Math.floor(r % 6e4 / 1e3);
+    barra.innerHTML = `⚠️ Preço de fundadora só até ${d}/${m}/${a} · depois vai para R$ 97 <span class="tempo">${dias > 0 ? dias + "d " : ""}${dois(h)}:${dois(mi)}:${dois(s)}</span>`;
+    setTimeout(tic, 1000);
+  };
+  tic();
+})();
+/* =============================================================== */
+
+/* Categorias da prévia */
+const CAT = {
+  "Conexão":{cor:"#EC4899", fundo:"#FCE7F3"}, "Mobilidade":{cor:"#3B82F6", fundo:"#DBEAFE"},
+  "Aquecimento":{cor:"#F59E0B", fundo:"#FEF3C7"}, "Relaxamento":{cor:"#14B8A6", fundo:"#CCFBF1"},
+  "Força":{cor:"#EF4444", fundo:"#FEE2E2"}, "Equilíbrio":{cor:"#8B5CF6", fundo:"#EDE9FE"}, "Coordenação":{cor:"#0EA5E9", fundo:"#E0F2FE"}
+};
+
+/* Rotinas de exemplo (rascunho: a fisioterapeuta revisa antes de ir ao ar). img = arquivo em img/ */
+const ROTINAS = {
+  "0": {titulo:"Rotina da Semana 0 (0 a 2 meses)", min:5, itens:[
+    {n:"Pedalada", vid:"pedalada", c:"Mobilidade", d:"40 s", img:"img-08", t:"Bebê de barriga para cima. Segure as perninhas logo abaixo dos joelhos e faça o movimento de pedalar, devagar e no ritmo dele."},
+    {n:"Joelhos ao peito", vid:"joelhos-peito", c:"Mobilidade", d:"30 s", img:"img-14", t:"Leve os dois joelhos dele em direção à barriga e volte, num ritmo calmo. Ajuda também na hora dos gases."},
+    {n:"Segurar o brinquedo", c:"Conexão", d:"1 min", trava:true},
+    {n:"Olhar que acompanha", c:"Aquecimento", d:"1 min", trava:true},
+    {n:"Balanço do quadril", c:"Relaxamento", d:"30 s", trava:true}]},
+  "12": {titulo:"Rotina da Semana 12 (cerca de 3 meses)", min:6, itens:[
+    {n:"Bruços no rolinho", vid:"brucos-rolinho", c:"Força", d:"1 min", img:"img-09", t:"Uma toalha enrolada sob o peito, os braços à frente do rolinho e o brinquedo na altura dos olhos."},
+    {n:"Alcance de lado", vid:"alcance-lado", c:"Mobilidade", d:"1 min cada lado", img:"img-16", t:"Deite-o de lado, com uma toalha nas costas, e deixe o brinquedo perto das mãos dele."},
+    {n:"Mãos no meio", vid:"maos-meio", c:"Coordenação", d:"1 min", img:"img-05", t:"De barriga para cima, ofereça o brinquedo bem no centro do peito para ele trazer as duas mãos juntas."},
+    {n:"Aviãozinho", c:"Força", d:"30 s", trava:true},
+    {n:"Rolar guiado", c:"Mobilidade", d:"3x cada lado", trava:true},
+    {n:"Massagem das perninhas", c:"Relaxamento", d:"1 min", trava:true}]},
+  "27": {titulo:"Rotina da Semana 27 (cerca de 6 meses)", min:8, itens:[
+    {n:"Sentar com apoio no quadril", vid:"sentar-apoio", c:"Equilíbrio", d:"1–2 min", img:"img-17", t:"Sente-o entre as suas pernas segurando pelo quadril, não pelas axilas. Brinquedo baixo, à frente."},
+    {n:"Rolar pelo quadril", vid:"rolar-quadril", c:"Mobilidade", d:"3x cada lado", img:"img-11", t:"De barriga para cima, dobre um joelho e leve o quadril devagar para o lado. Deixe ele terminar o giro."},
+    {n:"Barquinho", vid:"barquinho", c:"Força", d:"30 s", img:"img-13", t:"De bruços, ofereça o brinquedo um pouco acima da cabeça para ele erguer o peito e os braços."},
+    {n:"Ponte de almofada", c:"Força", d:"30 s", trava:true},
+    {n:"Alcance sentado", c:"Equilíbrio", d:"1 min", trava:true},
+    {n:"Avião no colo", c:"Coordenação", d:"30 s", trava:true}]},
+  "52": {titulo:"Rotina da Semana 52 (cerca de 12 meses)", min:9, itens:[
+    {n:"De pé no sofá", vid:"de-pe-sofa", c:"Força", d:"1 min", img:"img-18", t:"Um brinquedo em cima do sofá para ele puxar e ficar de pé apoiado. Fique atrás, sem segurar pelas mãos."},
+    {n:"Carrinho de mão", vid:"carrinho-mao", c:"Força", d:"20 s", img:"img-12", t:"Com ele de bruços, apoie pelo quadril e pelas coxas, nunca pelos pés, e deixe as mãos dele caminharem para a frente."},
+    {n:"Passos de lado", c:"Equilíbrio", d:"1 min", trava:true},
+    {n:"Agachar e levantar", c:"Força", d:"1 min", trava:true},
+    {n:"Escada de almofadas", c:"Coordenação", d:"1 min", trava:true}]},
+  "qualquer": {titulo:"Atividades a qualquer hora", min:11, itens:[
+    {n:"Hora da cólica", vid:"colica", c:"Relaxamento", d:"3 min", img:"img-14", t:"Joelhos ao peito e pedalada, devagar, com a mão quentinha na barriga dele."},
+    {n:"Antes de dormir", vid:"antes-dormir", c:"Relaxamento", d:"3 min", img:"img-06", t:"Massagem nas perninhas e balanço suave do quadril, de um lado para o outro, com a luz baixa."},
+    {n:"Bruços sem choro", vid:"brucos-colo", c:"Conexão", d:"5 min", img:"img-04", t:"No seu peito, depois de lado e depois no colo. O chão vem quando ele já tiver força."}]}
+};
+const SEMANAS = ["0","12","27","52"];
+let semanaAtual = "0", tipoAtual = "semana";
+
+function videoHTML(id, nome){
+  return `<video class="foto demo" src="videos/${id}.mp4" autoplay muted loop playsinline preload="metadata" aria-label="${nome}" style="height:170px;width:100%;object-fit:cover;border-radius:12px;margin-bottom:10px;background:#000"></video>`;
+}
+function esbocoHTML(id, nome){
+  return `<div class="esboco" data-src="img/${id}" data-cls="foto" data-alt="${nome}" style="height:170px;margin-bottom:10px"><b>${id.toUpperCase()}</b>${nome}</div>`;
+}
+function desenharRotina(){
+  const chave = tipoAtual === "qualquer" ? "qualquer" : semanaAtual;
+  const r = ROTINAS[chave];
+  document.getElementById("rotina-titulo").textContent = r.titulo;
+  document.getElementById("n-ex").textContent = r.itens.length;
+  document.getElementById("n-min").textContent = r.min;
+  document.getElementById("itens").innerHTML = r.itens.map((it, i) => {
+    const cat = CAT[it.c];
+    return `<div class="item${it.trava ? " trava" : ""}${i === 0 && !it.trava ? " aberto" : ""}">
+      <button type="button"${it.trava ? ' tabindex="-1" aria-hidden="true"' : ' aria-expanded="' + (i === 0) + '"'}>
+        <span class="ponto" style="background:${cat.cor}"></span><span class="nome">${it.n}</span>
+        <span class="chip" style="color:${cat.cor};background:${cat.fundo}">${it.c}</span><span class="dur">${it.d}</span>
+      </button>
+      ${it.trava ? "" : `<div class="corpo">${it.vid ? videoHTML(it.vid, it.n) : ""}<p>${it.t}</p></div>`}
+    </div>`;
+  }).join("");
+  document.querySelectorAll("#itens .item:not(.trava) > button").forEach(b => b.addEventListener("click", () => {
+    const item = b.parentElement, aberto = item.classList.toggle("aberto");
+    b.setAttribute("aria-expanded", aberto);
+  }));
+  carregarImagens(document.getElementById("itens"));
+}
+(function(){
+  const abas = document.getElementById("abas-semana");
+  abas.innerHTML = SEMANAS.map(s => `<button type="button" role="tab" aria-selected="${s === semanaAtual}" data-semana="${s}">Semana ${s}</button>`).join("");
+  abas.addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (!b) return;
+    semanaAtual = b.dataset.semana; tipoAtual = "semana";
+    abas.querySelectorAll("button").forEach(x => x.setAttribute("aria-selected", x === b));
+    document.querySelectorAll("#abas-tipo button").forEach(x => x.setAttribute("aria-selected", x.dataset.tipo === "semana"));
+    desenharRotina();
+  });
+  document.getElementById("abas-tipo").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (!b) return;
+    tipoAtual = b.dataset.tipo;
+    document.querySelectorAll("#abas-tipo button").forEach(x => x.setAttribute("aria-selected", x === b));
+    desenharRotina();
+  });
+})();
+
+/* Mosaico da biblioteca: 12 movimentos em 3 colunas que sobem devagar */
+const BIBLIO = [
+  ["img-07","Aviãozinho"],["img-08","Pedalada"],["img-09","Bruços no rolinho"],["img-10","Ponte"],
+  ["img-11","Rolar"],["img-12","Carrinho de mão"],["img-13","Barquinho"],["img-14","Joelhos ao peito"],
+  ["img-15","Prancha apoiada"],["img-16","Alcance de lado"],["img-17","Sentar com apoio"],["img-18","De pé no sofá"]
+];
+
+
+/* Imagens: quando o arquivo existir em img/ (webp, png ou jpg), entra no lugar do esboço */
+function carregarImagens(raiz){
+  const EXT = ["webp", "png", "jpg", "jpeg"];
+  (raiz || document).querySelectorAll("[data-src]").forEach(el => {
+    const base = el.dataset.src, alt = el.dataset.alt || "", cls = el.dataset.cls || "foto";
+    const tentar = i => {
+      if (i >= EXT.length) return;
+      const im = new Image();
+      im.onload = () => {
+        im.alt = alt; im.decoding = "async"; im.className = cls;
+        if (el.getAttribute("style")) im.setAttribute("style", el.getAttribute("style"));
+        el.replaceWith(im);
+      };
+      im.onerror = () => tentar(i + 1);
+      im.src = base + "." + EXT[i];
+    };
+    tentar(0);
+  });
+}
+desenharRotina();
+carregarImagens();
+
+/* Links de checkout com as UTMs da visita */
+const UTMS = location.search.replace(/^\?/, "");
+document.querySelectorAll(".botao-checkout").forEach(a => {
+  const url = CONFIG.checkout[a.dataset.checkout];
+  if (url) a.href = UTMS ? url + (url.includes("?") ? "&" : "?") + UTMS : url;
+  else a.setAttribute("data-pendente", "sem link de checkout");
+});
+
+/* Pixel: início de checkout em todo botão de compra */
+document.addEventListener("click", ev => {
+  const b = ev.target.closest(".botao-checkout");
+  if (b && typeof window.fbq === "function") fbq("track", "InitiateCheckout", {content_name: b.dataset.checkout});
+});
+
+/* Modal do Mapa */
+const overlay = document.getElementById("overlay");
+const abrirModal = () => overlay.classList.add("ativo");
+document.getElementById("abrir-modal").addEventListener("click", abrirModal);
+document.querySelectorAll("[data-abre-modal]").forEach(b => b.addEventListener("click", abrirModal));
+document.getElementById("fechar-modal").addEventListener("click", () => overlay.classList.remove("ativo"));
+overlay.addEventListener("click", ev => { if (ev.target === overlay) overlay.classList.remove("ativo"); });
+document.addEventListener("keydown", ev => { if (ev.key === "Escape") overlay.classList.remove("ativo"); });
+</script>
+<div class="barra-fixa" id="barra-fixa" aria-hidden="true"><a href="#planos" class="btn botao-cta"><span class="seta">→</span>Quero ajudar meu bebê agora</a></div>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var secoes = document.querySelectorAll('section, .ponto, .linha-tudo');
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, {threshold: 0.12});
+    secoes.forEach(function(s){ s.classList.add('reveal'); obs.observe(s); });
+    var barra = document.getElementById('barra-fixa');
+    var primeiro = document.querySelector('.botao-cta');
+    var planos = document.getElementById('planos');
+    var vistoPrimeiro = false, nosPlanos = false;
+    function atualiza(){ barra.classList.toggle('on', vistoPrimeiro && !nosPlanos); }
+    if (primeiro) new IntersectionObserver(function(es){ es.forEach(function(e){ vistoPrimeiro = !e.isIntersecting && e.boundingClientRect.top < 0; }); atualiza(); }, {threshold: 0}).observe(primeiro);
+    if (planos) new IntersectionObserver(function(es){ es.forEach(function(e){ nosPlanos = e.isIntersecting; }); atualiza(); }, {threshold: 0.15}).observe(planos);
+  }
+})();
+</script>
+<script>
+/* Mosaico da biblioteca: quadros dos vídeos de demonstração subindo devagar atrás do título */
+(function(){
+  var el = document.getElementById("colunas"); if (!el) return;
+  var cols = [[1,4,7,10],[2,5,8,11],[3,6,9,12]];
+  el.innerHTML = cols.map(function(c){
+    var html = c.map(function(n){ var id = ("0"+n).slice(-2); return '<img class="foto" src="img/bib-'+id+'.webp" alt="" loading="lazy" decoding="async">'; }).join("");
+    return '<div class="col">'+html+html+'</div>';
+  }).join("");
+})();
+</script>
+</body>
+</html>
